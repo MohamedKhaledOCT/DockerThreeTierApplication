@@ -8,6 +8,6 @@ RUN ls -l /app/main
 
 FROM alpine:3.15
 WORKDIR /app
-COPY --from=builder /app/main /app/main
+COPY --from=builder /app/main .
 EXPOSE 8080
 CMD ["./main"]
